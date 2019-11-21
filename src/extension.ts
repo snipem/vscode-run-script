@@ -15,6 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
 			var text = fs.readFileSync(vscode.window.activeTextEditor.document.fileName).toString('utf-8');
 			var textByLine = text.split("\n");
 
+			// TODO operate with regexp on whole unsplitted string
 			textByLine.forEach((line: string) => {
 				// TODO end after first match
 
