@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 				// TODO end after first match
 
 				// TODO Use comment symbol from syntax highlighter
-				var string_to_match = "^(#|\/\/) run: (.*)$";
+				var string_to_match = "^(#|\/\/|--) run: (.*)$";
 				var matched_string = line.match(string_to_match);
 
 				if (matched_string && matched_string.index === 0) {
