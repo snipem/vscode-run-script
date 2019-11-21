@@ -15,7 +15,7 @@ echo "this script was invoked by run-script"
 
 This extension will send `./this_script.sh` as a command to your currently opened terminal:
 
-```
+```bash
 $ ./this_script
 this script was invoked by run-script
 ```
