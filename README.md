@@ -1,6 +1,6 @@
 # run-script README
 
-Run scripts via a comment in your file like `# run: bash the_script.sh`
+Run commands by declaring them as a comment in your file.
 
 ## Features
 
@@ -10,7 +10,14 @@ Searches for a command starting with `run:` in your source file and executes the
 #!/bin/bash
 # run: ./this_script.sh
 
-echo "is now executed by run-script"
+echo "this script was invoked by run-script"
+```
+
+This extension will send `./this_script.sh` as a command to your terminal:
+
+```
+$ ./this_script
+this script was invoked by run-script
 ```
 
 It runs a command in the current terminal. If there is no terminal it will open one. This is basically redundant to the VSCode launch settings but far quicker for easy script development.
