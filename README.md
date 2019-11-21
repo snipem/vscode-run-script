@@ -20,6 +20,8 @@ $ ./this_script
 this script was invoked by run-script
 ```
 
+![Run command in terminal](assets/runscript.gif)
+
 It runs a command in the current terminal. If there is no terminal it will open one. This is basically redundant to the VSCode launch settings but far quicker for easy script development.
 
 Bind `extension.runscript` to a keybinding of your liking. I prefer `,s` together with the [Vim extension](http://aka.ms/vscodevim).
