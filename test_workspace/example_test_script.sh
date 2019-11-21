@@ -1,4 +1,4 @@
 #!/bin/bash
-# run: uname -a
+# run: ./example_test_script && echo done
 
-echo should run ls
+echo test script is run
