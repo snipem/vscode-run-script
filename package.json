@@ -21,7 +21,12 @@
 				"command": "extension.runscript",
 				"title": "Run Script"
 			}
-		]
+		],
+		"keybindings": {
+			"key": "ctrl+l",
+			"mac": "cmd+l",
+			"command": "extension.runscript"
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
