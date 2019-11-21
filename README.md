@@ -26,6 +26,8 @@ It runs a command in the current terminal. If there is no terminal it will open 
 
 Bind `extension.runscript` to a keybinding of your liking. I prefer `,s` together with the [Vim extension](http://aka.ms/vscodevim).
 
+By default `ctrl l` or `cmd l` is bound to `run-script`.
+
 I've edited my user settings with this entry as described [here](https://github.com/VSCodeVim/Vim#quick-example):
 
 ```json
