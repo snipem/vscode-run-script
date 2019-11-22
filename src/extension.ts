@@ -1,42 +1,48 @@
 // run: vsce package
 import * as vscode from 'vscode';
-import { match } from 'minimatch';
+var fs = require("fs");
+
+export function getCommandFromFile(filename: string, encoding : string) : string | null {
+	let text : string = fs.readFileSync(filename).toString(encoding);
+	let string_to_match : string = "^(#|\/\/|--) run: (.*)$";
+
+	var command = null;
+
+	text.split("\n").forEach((line: string) => {
+		let matched_string : RegExpMatchArray | null = line.match(string_to_match);
+		if(matched_string) {
+			command = matched_string[2];
+			return;
+		}
+	});
+
+	return command;
+}
 
 export function activate(context: vscode.ExtensionContext) {
 
 	let disposable = vscode.commands.registerCommand('extension.runscript', () => {
 
-		if ( vscode.window.activeTextEditor ) {
-			console.debug("Run script: "+ vscode.window.activeTextEditor.document.fileName);
+		if (vscode.window.activeTextEditor) {
+			console.debug("Run script: " + vscode.window.activeTextEditor.document.fileName);
 
-			var fs = require("fs");
-
+			// TODO Use comment symbol from syntax highlighter
 			// TODO Use encoding of editor
-			var text = fs.readFileSync(vscode.window.activeTextEditor.document.fileName).toString('utf-8');
-			var textByLine = text.split("\n");
 
-			// TODO operate with regexp on whole unsplitted string
-			textByLine.forEach((line: string) => {
-				// TODO end after first match
+			var run_command = getCommandFromFile(vscode.window.activeTextEditor.document.fileName, "utf-8");
 
-				// TODO Use comment symbol from syntax highlighter
-				var string_to_match = "^(#|\/\/|--) run: (.*)$";
-				var matched_string = line.match(string_to_match);
+			if (!run_command) {
+				return;
+			}
 
-				if (matched_string && matched_string.index === 0) {
-					var run_command = matched_string[2];
-					console.debug("Found run command " + run_command);
-
-					var terminal;
-					if (vscode.window.activeTerminal) {
-						terminal = vscode.window.activeTerminal;
-					}
-					else {
-						terminal = vscode.window.createTerminal();
-					}
-					terminal.sendText(run_command);
-				}
-			});
+			var terminal;
+			if (vscode.window.activeTerminal) {
+				terminal = vscode.window.activeTerminal;
+			}
+			else {
+				terminal = vscode.window.createTerminal();
+			}
+			terminal.sendText(run_command);
 		}
 
 	});
