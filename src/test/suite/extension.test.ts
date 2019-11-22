@@ -8,11 +8,14 @@ import * as path from 'path';
 
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
-	const extensionDevelopmentPath = path.resolve(__dirname, '../../../');
-	var pathToTestScripts = extensionDevelopmentPath + "/test_workspace/";
+	const pathToTestScripts = path.resolve(__dirname, '../../../') + "/test_workspace/";
 
 	test('Parse run statement', () => {
 		assert.equal(runscript.getCommandFromFile(pathToTestScripts + "example_test_script.sh", "utf-8"), "./example_test_script.sh && echo done");
 		assert.equal(runscript.getCommandFromFile(pathToTestScripts + "example_test_script.js", "utf-8"), "uname -a");
+	});
+
+	test('Run Script in acutal VSCode', () => {
+
 	});
 });
