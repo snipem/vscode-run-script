@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add config option to run the default debugger when no `run:` statement was found
+
 ## Changed
 
 - Only run first `run:` statement

@@ -28,7 +28,17 @@
 			"key": "ctrl+l",
 			"mac": "cmd+l",
 			"command": "extension.runscript"
-		}
+		},
+		"configuration": {
+			"title": "Run Script",
+			"properties": {
+			  "runscript.startDebuggingWhenNoRunStatementFound": {
+				"type": "boolean",
+				"default": false,
+				"description": "Starts the default debugger if no run-statement was found in the current file."
+			  }
+			}
+		  }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

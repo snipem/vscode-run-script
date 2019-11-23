@@ -32,6 +32,10 @@ export function activate(context: vscode.ExtensionContext) {
 			var run_command = getCommandFromFile(vscode.window.activeTextEditor.document.fileName, "utf-8");
 
 			if (!run_command) {
+				let configuration = vscode.workspace.getConfiguration();
+				if (configuration.get("runscript.startDebuggingWhenNoRunStatementFound")) {
+					vscode.commands.executeCommand("workbench.action.debug.start");
+				}
 				return;
 			}
 
