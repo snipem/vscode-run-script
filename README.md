@@ -24,6 +24,10 @@ this script was invoked by run-script
 
 It runs a command in the current terminal. If there is no terminal it will open one. This is basically redundant to the VSCode launch settings but far quicker for easy script development.
 
+## Configuration
+
+You can configure if the default debugger is run when no `run:` statement was found in the current file. Use the property `runscript.startDebuggingWhenNoRunStatementFound` for this. Default is false.
+
 Bind `extension.runscript` to a keybinding of your liking. I prefer `,s` together with the [Vim extension](http://aka.ms/vscodevim).
 
 By default `ctrl l` or `cmd l` is bound to `run-script`.

@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.0.3] - 2019-11-23
+
 ### Added
 
 - Add config option to run the default debugger when no `run:` statement was found
