@@ -2,7 +2,7 @@
 build:
 	vsce package
 	
-publish:
+publish: test
 	vsce publish
 
 test:
