@@ -1,6 +1,6 @@
 # run-script README
 
-[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/matthiaskuech.run-script.svg)](https://marketplace.visualstudio.com/items?itemName=matthiaskuech.run-script) [![Installs](https://vsmarketplacebadge.apphb.com/installs/matthiaskuech.run-script.svg)](https://marketplace.visualstudio.com/items?itemName=matthiaskuech.run-script) [![Rating](https://vsmarketplacebadge.apphb.com/rating/matthiaskuech.run-script.svg)](https://marketplace.visualstudio.com/items?itemName=matthiaskuech.run-script) [![Build Status](https://travis-ci.org/snipem/vscode-run-script.svg?branch=master)](https://travis-ci.org/snipem/vscode-run-script)
+[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/matthiaskuech.run-script.svg)](https://marketplace.visualstudio.com/items?itemName=matthiaskuech.run-script) [![Installs](https://vsmarketplacebadge.apphb.com/installs/matthiaskuech.run-script.svg)](https://marketplace.visualstudio.com/items?itemName=matthiaskuech.run-script) [![Rating](https://vsmarketplacebadge.apphb.com/rating/matthiaskuech.run-script.svg)](https://marketplace.visualstudio.com/items?itemName=matthiaskuech.run-script) [![Build Status](https://travis-ci.com/snipem/vscode-run-script.svg?branch=master)](https://travis-ci.com/snipem/vscode-run-script)
 
 Run commands by declaring them as a comment in your file.
 
