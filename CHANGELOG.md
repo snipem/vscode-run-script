@@ -1,6 +1,10 @@
 # Change Log
 
-## [Unreleased]
+## [0.0.5] - 2020-04-21
+
+### Changed
+
+- Upgrade dependencies
 
 ## [0.0.4] - 2019-11-23
 
@@ -8,7 +12,7 @@
 
 - Add config option to run the default debugger when no `run:` statement was found
 
-## Changed
+### Changed
 
 - Only run first `run:` statement
 
