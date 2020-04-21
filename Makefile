@@ -7,3 +7,7 @@ publish: test
 
 test:
 	npm run test
+
+upgrade_dependencies:
+	# Edit package.json first
+	npm i --package-lock-only
