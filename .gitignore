@@ -4,3 +4,4 @@ node_modules
 *.vsix
 README.sample.md
 vsc-extension-quickstart.md
+test_workspace/test_run.log
