@@ -17,3 +17,37 @@ Write-Good Linter active...
     ✓ Parse run statement
   1 passing (240ms)
 ```
+
+## Publishing the Extension
+
+### Create token
+
+Create token for `vsce` from https://dev.azure.com/matthiaskuech/_usersSettings/tokens.
+
+### Login
+
+```bash
+$ vsce login matthiaskuech
+Publisher 'matthiaskuech' is already known
+Do you want to overwrite its PAT? [y/N] y
+Personal Access Token for publisher 'matthiaskuech': ****************************************************
+```
+
+Check mails from Azure DevOps for Deep Link to the token creation screen.
+
+> Summary
+> Name	vscode-runscript
+> Scopes	All scopes
+> Expiring on	7/26/2020
+> Origination IP	****
+> User agent	Mozilla/5.0 ****
+
+### Publish
+
+`make publish`. Run in Terminal without VSCode for automated UI testing.
+
+### Info
+
+Get info about extension:
+
+`vsce show matthiaskuech.run-script`
